@@ -15,7 +15,7 @@ def test_negatives():
 #     sys.stdout = capturedOutput
 #     code_holder(3, 35)
 #     sys.stdout = orig_stdout # don't rely on __stdout__
-#
+
 #     print 'Captured', capturedOutput.getvalue()
 #     output_val = capturedOutput.getvalue().strip()
 #     assert output_val == 'ok'

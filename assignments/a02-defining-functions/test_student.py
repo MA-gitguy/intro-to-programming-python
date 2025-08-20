@@ -1,7 +1,7 @@
-try: 
+try:
     from a02 import get_area, output_parameter
-except ImportError: 
-    pass 
+except ImportError:
+    pass
 
 epsilon = 0.001 # precision needed
 
@@ -31,10 +31,10 @@ def test_parameter_float():
 # output capturing decorator
 def capture_output(fn):
     def wrapper(*args, **kwargs):
-        import StringIO
+        from io import StringIO
         import sys
         orig_stdout = sys.stdout
-        capturedOutput = StringIO.StringIO()
+        capturedOutput = StringIO()
         sys.stdout = capturedOutput
 
         v = fn(*args, **kwargs)

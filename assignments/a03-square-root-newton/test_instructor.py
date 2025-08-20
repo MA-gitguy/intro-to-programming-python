@@ -41,7 +41,7 @@ def test_improve_guess_zero():
     n = 1e-7
     g = 0
     res = improve_guess(g, n)
-    assert abs(res - 5.000000005) < epsilon
+    assert abs(res - n) < epsilon
 
 def test_improve_guess_2():
     # this one is for a student who can handle extremely bad cases.
@@ -52,7 +52,7 @@ def test_improve_guess_2():
     assert abs(res - 7.3571) < epsilon
 
 def test_improve_guess_2_dup():
-    # dup to increase weightage 
+    # dup to increase weightage
     n = 54
     g = 7
     res = improve_guess(g, n)

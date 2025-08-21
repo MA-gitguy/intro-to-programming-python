@@ -81,10 +81,10 @@ def test_calculate_sgpa_weighted_s_8():
 # output capturing decorator
 def capture_output(fn):
     def wrapper(*args, **kwargs):
-        import StringIO
+        from io import StringIO
         import sys
         orig_stdout = sys.stdout
-        capturedOutput = StringIO.StringIO()
+        capturedOutput = StringIO()
         sys.stdout = capturedOutput
 
         v = fn(*args, **kwargs)

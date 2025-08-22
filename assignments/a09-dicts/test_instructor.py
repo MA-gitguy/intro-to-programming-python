@@ -134,10 +134,10 @@ def test_get_author_count_i_6():
 # output capturing decorator
 def capture_output(fn):
     def wrapper(*args, **kwargs):
-        import StringIO
+        from io import StringIO
         import sys
         orig_stdout = sys.stdout
-        capturedOutput = StringIO.StringIO()
+        capturedOutput = StringIO()
         sys.stdout = capturedOutput
 
         v = fn(*args, **kwargs)

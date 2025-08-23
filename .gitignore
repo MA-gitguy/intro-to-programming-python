@@ -1,2 +1,5 @@
 venv/
 __pycache__/
+dummyfile.txt
+out.txt
+out-i.txt
